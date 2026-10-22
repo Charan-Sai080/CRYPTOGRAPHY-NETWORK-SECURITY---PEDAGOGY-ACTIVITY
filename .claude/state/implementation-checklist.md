@@ -1,0 +1,68 @@
+# Implementation Checklist: Pedagogy Platform
+
+## Milestone 1: Math Core
+- [x] Implement Extended Euclidean Algorithm (`ext_gcd(a, b) -> (g, x, y)`).
+- [x] Implement modular inverse (`mod_inverse(a, m) -> int`).
+- [x] Implement Miller-Rabin primality test (`is_prime(n, k=40) -> bool`).
+- [x] Implement safe prime generator (`generate_safe_prime(bits) -> (p, q)`).
+- [x] Implement primitive root generator (`find_primitive_root(p) -> int`).
+- [x] Implement traced modular exponentiation (`mod_pow_traced(base, exp, mod) -> (result, trace)`).
+- [x] Unit tests for all mathematical primitives (34/34 passing).
+
+## Milestone 2: One-Time Pad (OTP)
+- [ ] Implement CSPRNG key generator (`generate_otp_key(length) -> bytes`).
+- [ ] Implement byte-level XOR encryption and decryption.
+- [ ] Implement ASCII/UTF-8 and Hex/Base64 serialization.
+- [ ] Implement length validation and Shannon perfect secrecy explanation.
+- [ ] Implement Two-Time Pad vulnerability analyzer (crib-dragging demonstration).
+- [ ] Unit tests covering edge cases (empty strings, non-ASCII, key-reuse).
+
+## Milestone 3: Linear Congruential Generator (LCG)
+- [ ] Implement configurable LCG generator (`next_lcg(x, a, c, m)`).
+- [ ] Implement library of standard presets (ANSI C, POSIX, MINSTD, Borland).
+- [ ] Implement Hull-Dobell theorem validator (`verify_hull_dobell(a, c, m) -> (is_full, details)`).
+- [ ] Implement Floyd's cycle-finding algorithm (`find_cycle(a, c, m, x0) -> (period, cycle_start)`).
+- [ ] Implement Chi-square uniformity test (`chi_square_uniformity(sequence, m, bins)`).
+- [ ] Implement 2D and 3D hyperplane coordinate generator.
+- [ ] Unit tests for LCG algorithms and period checks.
+
+## Milestone 4: ElGamal Cryptosystem
+- [ ] Implement domain parameter generation (educational small primes and RFC MODP groups).
+- [ ] Implement key pair generation (`generate_elgamal_keys(p, g) -> (priv, pub)`).
+- [ ] Implement encryption with calculation trace (`encrypt_elgamal(m, pub, p, g, k)`).
+- [ ] Implement decryption with calculation trace (`decrypt_elgamal(c1, c2, priv, p)`).
+- [ ] Implement message chunking for arbitrary text strings.
+- [ ] Implement multiplicative homomorphism demonstration.
+- [ ] Implement ephemeral key $k$ reuse vulnerability demonstration.
+- [ ] Unit tests for ElGamal cryptosystem and edge cases.
+
+## Milestone 5: Digital Signature Algorithm (DSA)
+- [ ] Implement FIPS 186-4 parameter generator ($(p, q, g)$).
+- [ ] Implement key pair generation (`generate_dsa_keys(p, q, g) -> (priv, pub)`).
+- [ ] Implement signing with SHA-256 and $k$-resampling (`sign_dsa(message, priv, p, q, g, k)`).
+- [ ] Implement verification with calculation trace (`verify_dsa(message, r, s, pub, p, q, g)`).
+- [ ] Implement real-time document tampering detector.
+- [ ] Implement Sony PS3 style nonce-reuse private key recovery exploit.
+- [ ] Unit tests for DSA signing, verification, and tamper detection.
+
+## Milestone 6: Backend API Layer (FastAPI)
+- [ ] Set up FastAPI project structure with CORS and error handlers.
+- [ ] Create Pydantic models for OTP, LCG, ElGamal, and DSA endpoints.
+- [ ] Implement routes under `/api/v1/otp/*`.
+- [ ] Implement routes under `/api/v1/lcg/*`.
+- [ ] Implement routes under `/api/v1/elgamal/*`.
+- [ ] Implement routes under `/api/v1/dsa/*`.
+- [ ] Automated pytest suite covering API routes with 100% endpoint pass rate.
+
+## Milestone 7: Frontend Web Application
+- [ ] Set up modern React + TypeScript + Tailwind CSS project.
+- [ ] Build global layout, navigation, and cryptographic pedagogy documentation syllabus.
+- [ ] Build Lab 1: One-Time Pad Interactive Lab & Two-Time Pad Cracker.
+- [ ] Build Lab 2: LCG Parameter Explorer, Cycle Visualizer, & 2D/3D Lattice Plot.
+- [ ] Build Lab 3: ElGamal Key Exchange, Step-by-Step Math, & Homomorphic Playground.
+- [ ] Build Lab 4: DSA Document Signer, Live Tamper Tester, & PS3 Nonce Exploit.
+
+## Milestone 8: Deployment & Packaging
+- [ ] Create multi-stage Dockerfile bundling FastAPI backend and built frontend assets.
+- [ ] Verify production container startup and test suite execution.
+- [ ] Provide hosting guides and README documentation.
