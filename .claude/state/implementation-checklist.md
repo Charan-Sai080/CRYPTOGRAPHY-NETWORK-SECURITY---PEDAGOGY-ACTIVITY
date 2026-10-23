@@ -18,13 +18,13 @@
 - [x] Unit tests covering edge cases (52/52 passing, 86/86 total).
 
 ## Milestone 3: Linear Congruential Generator (LCG)
-- [ ] Implement configurable LCG generator (`next_lcg(x, a, c, m)`).
-- [ ] Implement library of standard presets (ANSI C, POSIX, MINSTD, Borland).
-- [ ] Implement Hull-Dobell theorem validator (`verify_hull_dobell(a, c, m) -> (is_full, details)`).
-- [ ] Implement Floyd's cycle-finding algorithm (`find_cycle(a, c, m, x0) -> (period, cycle_start)`).
-- [ ] Implement Chi-square uniformity test (`chi_square_uniformity(sequence, m, bins)`).
-- [ ] Implement 2D and 3D hyperplane coordinate generator.
-- [ ] Unit tests for LCG algorithms and period checks.
+- [x] Implement configurable LCG generator (`next_lcg(x, a, c, m)`).
+- [x] Implement library of standard presets (ANSI C, POSIX, MINSTD, Borland).
+- [x] Implement Hull-Dobell theorem validator (`verify_hull_dobell(a, c, m) -> (is_full, details)`).
+- [x] Implement Floyd's cycle-finding algorithm (`find_cycle(a, c, m, x0) -> (period, cycle_start)`).
+- [x] Implement Chi-square uniformity test (`chi_square_uniformity(sequence, m, bins)`).
+- [x] Implement 2D and 3D hyperplane coordinate generator.
+- [x] Unit tests for LCG algorithms and period checks (56/56 passing, 143/143 total).
 
 ## Milestone 4: ElGamal Cryptosystem
 - [ ] Implement domain parameter generation (educational small primes and RFC MODP groups).

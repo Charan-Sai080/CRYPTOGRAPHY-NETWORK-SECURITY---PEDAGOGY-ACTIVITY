@@ -1,7 +1,6 @@
 # Task Board: Cryptography Pedagogy Platform
 
 ## Backlog
-- **Task 3**: Implement Milestone 3 - Linear Congruential Generator (LCG) & Statistical/Lattice Analysis.
 - **Task 4**: Implement Milestone 4 - ElGamal Cryptosystem & Multiplicative Homomorphism.
 - **Task 5**: Implement Milestone 5 - Digital Signature Algorithm (DSA) & Nonce-Reuse Exploit.
 - **Task 6**: Implement Milestone 6 - FastAPI Backend REST API & Test Suite.
@@ -12,6 +11,11 @@
 - (None)
 
 ## Completed
+- **Task 3: Milestone 3 - Linear Congruential Generator (LCG) Engine & Statistical/Lattice Analysis** (`backend/core/lcg.py` & `backend/tests/test_lcg.py`). 56/56 unit tests passing (143/143 total).
+  - **Task 3.1 (M3.1)**: Core LCG Generator, Presets Library, and Sequence Extraction ($X_{n+1} = (a \cdot X_n + c) \pmod m$, normalized float $U_n \in [0, 1)$, historical standard presets, and detailed per-step arithmetic traces). Context: [context-packet-3.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-3.1.md)
+  - **Task 3.2 (M3.2)**: Hull-Dobell Theorem Validator & Floyd's Cycle-Finding Period Analyzer (exact 3-condition Hull-Dobell theorem checker, prime factor analysis, Floyd's tortoise-and-hare cycle detection with period $\lambda$ and cycle start $\mu$, multiplicative LCG period analysis). Context: [context-packet-3.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-3.2.md)
+  - **Task 3.3 (M3.3)**: Statistical Uniformity (Chi-Square), Marsaglia Hyperplane Lattice Analysis, and State Reconstruction (Chi-Square goodness-of-fit test, 2D/3D Marsaglia lattice point generation, theoretical hyperplane upper bound $\lfloor(d! \cdot m)^{1/d}\rfloor$, and algebraic state reconstruction cryptanalysis). Context: [context-packet-3.3.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-3.3.md)
+  - **Task 3.4 (M3.4)**: Comprehensive Pytest 8.x Test Suite covering all LCG features, edge cases, presets, mathematical identities, and theorems (`backend/tests/test_lcg.py`). Context: [context-packet-3.4.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-3.4.md)
 - **Task 2: Milestone 2 - One-Time Pad (OTP) Engine & Two-Time Pad Cryptanalysis** (`backend/core/otp.py` & `backend/tests/test_otp.py`). 52/52 unit tests passing (86/86 total).
   - **Task 2.1 (M2.1)**: Core OTP Engine with Byte/Bit XOR, CSPRNG Key Generation, and Pedagogical Execution Traces (bit-by-bit truth table, byte-by-byte inspection, Shannon entropy analysis). Context: [context-packet-2.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-2.1.md)
   - **Task 2.2 (M2.2)**: Two-Time Pad (Key Reuse) Vulnerability Engine & Automated Crib-Dragging Cryptanalysis (algebraic key cancellation proof, English readability scoring, manual & automated crib-dragging). Context: [context-packet-2.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-2.2.md)
