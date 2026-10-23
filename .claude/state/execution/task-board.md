@@ -1,7 +1,6 @@
 # Task Board: Cryptography Pedagogy Platform
 
 ## Backlog
-- **Task 2**: Implement Milestone 2 - One-Time Pad (OTP) Engine & Two-Time Pad Cryptanalysis.
 - **Task 3**: Implement Milestone 3 - Linear Congruential Generator (LCG) & Statistical/Lattice Analysis.
 - **Task 4**: Implement Milestone 4 - ElGamal Cryptosystem & Multiplicative Homomorphism.
 - **Task 5**: Implement Milestone 5 - Digital Signature Algorithm (DSA) & Nonce-Reuse Exploit.
@@ -13,6 +12,10 @@
 - (None)
 
 ## Completed
+- **Task 2: Milestone 2 - One-Time Pad (OTP) Engine & Two-Time Pad Cryptanalysis** (`backend/core/otp.py` & `backend/tests/test_otp.py`). 52/52 unit tests passing (86/86 total).
+  - **Task 2.1 (M2.1)**: Core OTP Engine with Byte/Bit XOR, CSPRNG Key Generation, and Pedagogical Execution Traces (bit-by-bit truth table, byte-by-byte inspection, Shannon entropy analysis). Context: [context-packet-2.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-2.1.md)
+  - **Task 2.2 (M2.2)**: Two-Time Pad (Key Reuse) Vulnerability Engine & Automated Crib-Dragging Cryptanalysis (algebraic key cancellation proof, English readability scoring, manual & automated crib-dragging). Context: [context-packet-2.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-2.2.md)
+  - **Task 2.3 (M2.3)**: Comprehensive Pytest 8.x Test Suite & Cryptographic Identities (normal paths, edge cases, key length mismatches, algebraic identities, 100% test coverage). Context: [context-packet-2.3.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-2.3.md)
 - **Task 1: Milestone 1 - Mathematical Foundations & Number Theory Engine** (`backend/core/number_theory.py` & `backend/tests/test_number_theory.py`). 34/34 unit tests passing with full pedagogical step traces.
   - **Task 1.1 (M1.1)**: Extended Euclidean Algorithm (EEA) and Modular Multiplicative Inverse (with full tabular Bezout quotient/remainder traces and non-coprime error handling). Context: [context-packet-1.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-1.1.md)
   - **Task 1.2 (M1.2)**: Traced Modular Exponentiation using Binary Square-and-Multiply (with MSB-to-LSB bit-by-bit calculation traces). Context: [context-packet-1.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-1.2.md)

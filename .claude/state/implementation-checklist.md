@@ -10,12 +10,12 @@
 - [x] Unit tests for all mathematical primitives (34/34 passing).
 
 ## Milestone 2: One-Time Pad (OTP)
-- [ ] Implement CSPRNG key generator (`generate_otp_key(length) -> bytes`).
-- [ ] Implement byte-level XOR encryption and decryption.
-- [ ] Implement ASCII/UTF-8 and Hex/Base64 serialization.
-- [ ] Implement length validation and Shannon perfect secrecy explanation.
-- [ ] Implement Two-Time Pad vulnerability analyzer (crib-dragging demonstration).
-- [ ] Unit tests covering edge cases (empty strings, non-ASCII, key-reuse).
+- [x] Implement CSPRNG key generator (`generate_otp_key(length) -> bytes`).
+- [x] Implement byte-level XOR encryption and decryption.
+- [x] Implement ASCII/UTF-8 and Hex/Base64 serialization.
+- [x] Implement length validation and Shannon perfect secrecy explanation.
+- [x] Implement Two-Time Pad vulnerability analyzer (crib-dragging demonstration).
+- [x] Unit tests covering edge cases (52/52 passing, 86/86 total).
 
 ## Milestone 3: Linear Congruential Generator (LCG)
 - [ ] Implement configurable LCG generator (`next_lcg(x, a, c, m)`).
