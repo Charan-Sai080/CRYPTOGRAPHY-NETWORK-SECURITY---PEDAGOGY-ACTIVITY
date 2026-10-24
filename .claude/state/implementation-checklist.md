@@ -27,14 +27,14 @@
 - [x] Unit tests for LCG algorithms and period checks (56/56 passing, 143/143 total).
 
 ## Milestone 4: ElGamal Cryptosystem
-- [ ] Implement domain parameter generation (educational small primes and RFC MODP groups).
-- [ ] Implement key pair generation (`generate_elgamal_keys(p, g) -> (priv, pub)`).
-- [ ] Implement encryption with calculation trace (`encrypt_elgamal(m, pub, p, g, k)`).
-- [ ] Implement decryption with calculation trace (`decrypt_elgamal(c1, c2, priv, p)`).
-- [ ] Implement message chunking for arbitrary text strings.
-- [ ] Implement multiplicative homomorphism demonstration.
-- [ ] Implement ephemeral key $k$ reuse vulnerability demonstration.
-- [ ] Unit tests for ElGamal cryptosystem and edge cases.
+- [x] Implement domain parameter generation (educational small primes and RFC MODP groups).
+- [x] Implement key pair generation (`generate_elgamal_keys(p, g) -> (priv, pub)`).
+- [x] Implement encryption with calculation trace (`encrypt_elgamal(m, pub, p, g, k)`).
+- [x] Implement decryption with calculation trace (`decrypt_elgamal(c1, c2, priv, p)`).
+- [x] Implement message chunking for arbitrary text strings.
+- [x] Implement multiplicative homomorphism demonstration.
+- [x] Implement ephemeral key $k$ reuse vulnerability demonstration.
+- [x] Unit tests for ElGamal cryptosystem and edge cases (61/61 passing, 204/204 total).
 
 ## Milestone 5: Digital Signature Algorithm (DSA)
 - [ ] Implement FIPS 186-4 parameter generator ($(p, q, g)$).

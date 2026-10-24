@@ -1,7 +1,6 @@
 # Task Board: Cryptography Pedagogy Platform
 
 ## Backlog
-- **Task 4**: Implement Milestone 4 - ElGamal Cryptosystem & Multiplicative Homomorphism.
 - **Task 5**: Implement Milestone 5 - Digital Signature Algorithm (DSA) & Nonce-Reuse Exploit.
 - **Task 6**: Implement Milestone 6 - FastAPI Backend REST API & Test Suite.
 - **Task 7**: Implement Milestone 7 - Interactive Frontend Web Application & Educational Labs.
@@ -11,6 +10,11 @@
 - (None)
 
 ## Completed
+- **Task 4: Milestone 4 - ElGamal Public-Key Cryptosystem & Multiplicative Homomorphism** (`backend/core/elgamal.py` & `backend/tests/test_elgamal.py`). 61/61 unit tests passing (204/204 total).
+  - **Task 4.1 (M4.1)**: Domain Parameter & Key Pair Generation Engine (Small educational primes 16-bit to 32-bit, RFC 2409 1024-bit MODP group, custom safe prime generator $p = 2q + 1$, primitive root verification over $\mathbb{Z}_p^*$, secure key generation $x \in [2, p - 2]$ and $y = g^x \pmod p$, structured key models `ElGamalDomainParams`, `ElGamalPublicKey`, `ElGamalPrivateKey`, `ElGamalKeyPair`). Context: [context-packet-4.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-4.1.md)
+  - **Task 4.2 (M4.2)**: Traced Encryption & Decryption Engine with Arbitrary Text Chunking (Ephemeral nonce $k \in [2, p - 2]$ with $\gcd(k, p - 1) = 1$, $c_1 = g^k \pmod p$, shared secret $s = y^k \pmod p$, $c_2 = (m \cdot s) \pmod p$, decryption via $s = c_1^x \pmod p$ and $s^{-1} = \text{mod\_inverse}(s, p)$, detailed per-block traces `ElGamalEncryptTrace` and `ElGamalDecryptTrace`, multi-block arbitrary UTF-8 text chunking and reconstruction). Context: [context-packet-4.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-4.2.md)
+  - **Task 4.3 (M4.3)**: Multiplicative Homomorphism & Nonce-Reuse Exploit Demonstrations (Component-wise ciphertext multiplication $E(m_1) \cdot E(m_2) = (c_{1,a} \cdot c_{1,b} \pmod p, c_{2,a} \cdot c_{2,b} \pmod p) = E(m_1 \cdot m_2 \pmod p)$ with decryption verification, and Ephemeral Nonce-Reuse Known-Plaintext Exploit $m_2 = (m_1 \cdot c_{2,b} \cdot c_{2,a}^{-1}) \pmod p$ when $c_{1,a} = c_{1,b}$). Context: [context-packet-4.3.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-4.3.md)
+  - **Task 4.4 (M4.4)**: Comprehensive Pytest 8.x Test Suite covering all ElGamal features, edge cases, presets, homomorphism, and cryptanalysis (`backend/tests/test_elgamal.py`). Context: [context-packet-4.4.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-4.4.md)
 - **Task 3: Milestone 3 - Linear Congruential Generator (LCG) Engine & Statistical/Lattice Analysis** (`backend/core/lcg.py` & `backend/tests/test_lcg.py`). 56/56 unit tests passing (143/143 total).
   - **Task 3.1 (M3.1)**: Core LCG Generator, Presets Library, and Sequence Extraction ($X_{n+1} = (a \cdot X_n + c) \pmod m$, normalized float $U_n \in [0, 1)$, historical standard presets, and detailed per-step arithmetic traces). Context: [context-packet-3.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-3.1.md)
   - **Task 3.2 (M3.2)**: Hull-Dobell Theorem Validator & Floyd's Cycle-Finding Period Analyzer (exact 3-condition Hull-Dobell theorem checker, prime factor analysis, Floyd's tortoise-and-hare cycle detection with period $\lambda$ and cycle start $\mu$, multiplicative LCG period analysis). Context: [context-packet-3.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-3.2.md)
