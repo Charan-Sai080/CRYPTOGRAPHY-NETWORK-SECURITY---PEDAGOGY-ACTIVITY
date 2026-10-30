@@ -822,6 +822,8 @@ def detect_tampering(
     signature: DSASignature,
     public_key: DSAPublicKey,
     tamper_type: str = "message_bit_flip",
+    bit_index: int = 0,
+    delta: int = 1,
 ) -> TamperDetectionResult:
     """Runs original and tampered verifications side-by-side to demonstrate failure."""
     orig_res = verify_message(message, signature, public_key)
@@ -830,18 +832,18 @@ def detect_tampering(
 
     if tamper_type == "message_bit_flip":
         msg_str = message if isinstance(message, str) else message.decode("utf-8", errors="surrogateescape")
-        tampered_msg = tamper_message_bit(msg_str, bit_index=0)
+        tampered_msg = tamper_message_bit(msg_str, bit_index=bit_index)
         tamp_res = verify_message(tampered_msg, signature, public_key)
         orig_val = message
         tamp_val = tampered_msg
         tampered_v = tamp_res.trace.v if tamp_res.trace else None
         explanation = (
-            f"Single-bit message corruption: Flipping bit 0 changed the message from '{orig_val}' to '{tamp_val}', "
+            f"Single-bit message corruption: Flipping bit {bit_index} changed the message from '{orig_val}' to '{tamp_val}', "
             f"which altered the SHA-256 digest z. This mutated exponent u1 = (z * w) mod q, causing the "
             f"verification point v to evaluate to {tampered_v} != r ({signature.r})."
         )
     elif tamper_type == "signature_r_alter":
-        tamp_r, tamp_s = tamper_signature_component(signature, component="r", delta=1)
+        tamp_r, tamp_s = tamper_signature_component(signature, component="r", delta=delta)
         orig_val = signature.r
         tamp_val = tamp_r
         try:

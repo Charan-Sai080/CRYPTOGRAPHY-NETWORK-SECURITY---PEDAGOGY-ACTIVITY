@@ -9,6 +9,6 @@
 * [x] **M3: LCG Engine & Statistics**: Completed (recurence formula, standard presets, step traces, Hull-Dobell theorem validator, Floyd cycle detection, Chi-Square uniformity with Wilson-Hilferty p-values, Marsaglia lattice hyperplanes, and algebraic state cracker; 56/56 tests passing, 143/143 overall).
 * [x] **M4: ElGamal Cryptosystem**: Completed (Domain parameters & presets, primitive root verification, keygen, single-integer and multi-block UTF-8 traced encryption/decryption, multiplicative homomorphism, and ephemeral nonce reuse exploit; 61/61 tests passing, 204/204 overall).
 * [x] **M5: Digital Signature Algorithm**: Completed (FIPS 186-4 parameters & presets, generator derivation, keygen, traced signing with SHA-256 and resampling loop, traced verification with algebraic proof, single-bit tamper detection, and Sony PS3 style nonce-reuse exploit; 41/41 tests passing, 245/245 overall).
-* [ ] **M6: FastAPI Backend & API Contracts**: Unlocked and Ready.
-* [ ] **M7: Interactive Pedagogical Frontend**: Pending M6.
+* [x] **M6: FastAPI Backend & API Contracts**: Completed (FastAPI app, CORS, global 400/422/500 handlers, Pydantic v2 schemas for all 4 pillars, large integer serialization, and complete API integration suite; 37/37 tests passing, 282/282 overall).
+* [ ] **M7: Interactive Pedagogical Frontend**: Unlocked and Ready.
 * [ ] **M8: Packaging & Deployment**: Pending M7.

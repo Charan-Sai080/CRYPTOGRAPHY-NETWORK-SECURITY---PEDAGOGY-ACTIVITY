@@ -46,13 +46,13 @@
 - [x] Unit tests for DSA signing, verification, and tamper detection (41/41 passing, 245/245 total).
 
 ## Milestone 6: Backend API Layer (FastAPI)
-- [ ] Set up FastAPI project structure with CORS and error handlers.
-- [ ] Create Pydantic models for OTP, LCG, ElGamal, and DSA endpoints.
-- [ ] Implement routes under `/api/v1/otp/*`.
-- [ ] Implement routes under `/api/v1/lcg/*`.
-- [ ] Implement routes under `/api/v1/elgamal/*`.
-- [ ] Implement routes under `/api/v1/dsa/*`.
-- [ ] Automated pytest suite covering API routes with 100% endpoint pass rate.
+- [x] Set up FastAPI project structure with CORS and error handlers.
+- [x] Create Pydantic models for OTP, LCG, ElGamal, and DSA endpoints.
+- [x] Implement routes under `/api/v1/otp/*`.
+- [x] Implement routes under `/api/v1/lcg/*`.
+- [x] Implement routes under `/api/v1/elgamal/*`.
+- [x] Implement routes under `/api/v1/dsa/*`.
+- [x] Automated pytest suite covering API routes with 100% endpoint pass rate (37/37 passing, 282/282 overall).
 
 ## Milestone 7: Frontend Web Application
 - [ ] Set up modern React + TypeScript + Tailwind CSS project.

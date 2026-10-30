@@ -1,7 +1,6 @@
 # Task Board: Cryptography Pedagogy Platform
 
 ## Backlog
-- **Task 6**: Implement Milestone 6 - FastAPI Backend REST API & Test Suite.
 - **Task 7**: Implement Milestone 7 - Interactive Frontend Web Application & Educational Labs.
 - **Task 8**: Implement Milestone 8 - Packaging, Containerization (Docker), & Deployment.
 
@@ -9,6 +8,13 @@
 - (None)
 
 ## Completed
+- **Task 6: Milestone 6 - FastAPI Backend REST API & Test Suite** (FastAPI 0.115+, Pydantic v2, TestClient/httpx test suite). 37/37 unit tests passing (282/282 total).
+  - **Task 6.1 (M6.1)**: FastAPI App Architecture, CORS Middleware, Global Error Handlers, and Schemas Base (`backend/main.py`, `backend/api/v1/router.py`, `backend/api/schemas/common.py`). Context: [context-packet-6.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-6.1.md)
+  - **Task 6.2 (M6.2)**: One-Time Pad REST Router (`/api/v1/otp/*`) with typed Pydantic models (`backend/api/v1/otp.py`, `backend/api/schemas/otp.py`). Context: [context-packet-6.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-6.2.md)
+  - **Task 6.3 (M6.3)**: Linear Congruential Generator REST Router (`/api/v1/lcg/*`) with typed Pydantic models (`backend/api/v1/lcg.py`, `backend/api/schemas/lcg.py`). Context: [context-packet-6.3.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-6.3.md)
+  - **Task 6.4 (M6.4)**: ElGamal Cryptosystem REST Router (`/api/v1/elgamal/*`) with typed Pydantic models (`backend/api/v1/elgamal.py`, `backend/api/schemas/elgamal.py`). Context: [context-packet-6.4.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-6.4.md)
+  - **Task 6.5 (M6.5)**: Digital Signature Algorithm REST Router (`/api/v1/dsa/*`) with typed Pydantic models (`backend/api/v1/dsa.py`, `backend/api/schemas/dsa.py`). Context: [context-packet-6.5.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-6.5.md)
+  - **Task 6.6 (M6.6)**: Comprehensive FastAPI End-to-End Test Suite (`backend/tests/test_api.py`) testing all endpoints with TestClient / httpx. Context: [context-packet-6.6.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-6.6.md)
 - **Task 5: Milestone 5 - Digital Signature Algorithm (DSA) & Nonce-Reuse Exploit** (`backend/core/dsa.py` & `backend/tests/test_dsa.py`). 41/41 unit tests passing (245/245 total).
   - **Task 5.1 (M5.1)**: FIPS 186-4 Domain Parameter & Key Pair Generation Engine (Prime modulus $p$, prime divisor $q$ with $q \mid (p - 1)$, generator $g = h^{(p - 1)/q} \pmod p > 1$, FIPS 186-4 standard 1024-bit/160-bit group, educational groups, private key $x \in [1, q - 1]$, public key $y = g^x \pmod p$, strict data models `DSADomainParams`, `DSAPublicKey`, `DSAPrivateKey`, `DSAKeyPair`). Context: [context-packet-5.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-5.1.md)
   - **Task 5.2 (M5.2)**: Traced Signing Engine with SHA-256 and FIPS 186-4 Resampling (Hash truncation $z = \text{leftmost } \min(\text{bit\_len}(q), 256) \text{ bits of SHA-256}(M)$, ephemeral secret $k \in [1, q - 1]$, $r = (g^k \pmod p) \pmod q$ with $r=0$ resampling, $s = (k^{-1} \cdot (z + x \cdot r)) \pmod q$ with $s=0$ resampling, pedagogical tracing with `DSASignature`, `DSASignTrace`). Context: [context-packet-5.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-5.2.md)
