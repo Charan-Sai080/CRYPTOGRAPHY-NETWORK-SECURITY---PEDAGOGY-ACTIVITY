@@ -1,0 +1,6 @@
+# Node & Frontend Build Artifacts
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm

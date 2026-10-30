@@ -1,13 +1,20 @@
 # Task Board: Cryptography Pedagogy Platform
 
-## Backlog
-- **Task 7**: Implement Milestone 7 - Interactive Frontend Web Application & Educational Labs.
-- **Task 8**: Implement Milestone 8 - Packaging, Containerization (Docker), & Deployment.
-
 ## In Progress
-- (None)
+- **Task 8: Milestone 8 - Packaging, Containerization (Docker), Production Serving & Deployment Guide**
+  - **Task 8.1 (M8.1)**: Unified Frontend Production Static File Serving via FastAPI (`backend/main.py` mounting `frontend/dist`).
+  - **Task 8.2 (M8.2)**: Multi-Stage Production `Dockerfile` and `docker-compose.yml` for unified single-container deployment.
+  - **Task 8.3 (M8.3)**: Startup orchestration script `run.sh` supporting both local development and production modes.
+  - **Task 8.4 (M8.4)**: Comprehensive Project Documentation and Hosting Guide in `README.md`.
 
 ## Completed
+- **Task 7: Milestone 7 - Interactive Frontend Web Application & Educational Labs** (React 18 + TypeScript + Tailwind CSS with dark/light mode toggle and 4 labs). Clean production build (0 TS errors, 0 bundle warnings). Context: [context-packet-7.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.md)
+  - **Task 7.1 (M7.1)**: Frontend Scaffolding, Tailwind Setup, Theme System, Header/Nav/Layout, API Client Base (`frontend/src/App.tsx`, `frontend/src/context/ThemeContext.tsx`, `frontend/src/api/client.ts`, `frontend/src/pages/DashboardPage.tsx`). Context: [context-packet-7.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.1.md)
+  - **Task 7.2 (M7.2)**: One-Time Pad Lab UI (Key generator with Shannon entropy gauge, live bit-by-bit truth table & byte-level visualizer, Two-Time Pad vulnerability sandbox with interactive crib-dragging slider and automated dictionary attack). Context: [context-packet-7.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.2.md)
+  - **Task 7.3 (M7.3)**: Linear Congruential Generator (LCG) Lab UI (Parameter inputs $m, a, c, X_0$ with standard presets dropdown, Hull-Dobell condition-by-condition validator with prime factors visualizer, Floyd cycle finder, Chi-Square uniformity histogram, Marsaglia 2D and 3D hyperplane lattice scatter plot with Canvas/SVG, and algebraic LCG state cracker). Context: [context-packet-7.3.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.3.md)
+  - **Task 7.4 (M7.4)**: ElGamal Cryptosystem Lab UI (Domain presets and safe prime generator, Alice & Bob interactive key exchange diagram, traced single-integer and multi-block UTF-8 text encryption/decryption with KaTeX formulas, Multiplicative Homomorphism multiplier playground $E(m_1) \cdot E(m_2)$, and Ephemeral Nonce Reuse cryptanalysis exploit). Context: [context-packet-7.4.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.4.md)
+  - **Task 7.5 (M7.5)**: Digital Signature Algorithm (DSA) Lab UI (Domain parameter inspector & key pair generator, document signing interface with SHA-256 hash truncation and FIPS 186-4 resampling trace, live step-by-step signature verification with LaTeX proof, real-time single-bit document/signature tampering simulator, and Sony PS3 Nonce-Reuse Private Key Extraction playground). Context: [context-packet-7.5.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.5.md)
+  - **Task 7.6 (M7.6)**: Frontend Production Build, Type-check, and Integration Verification (Vite build, Tailwind purge, zero TypeScript errors, responsive layout check). Context: [context-packet-7.6.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.6.md)
 - **Task 6: Milestone 6 - FastAPI Backend REST API & Test Suite** (FastAPI 0.115+, Pydantic v2, TestClient/httpx test suite). 37/37 unit tests passing (282/282 total).
   - **Task 6.1 (M6.1)**: FastAPI App Architecture, CORS Middleware, Global Error Handlers, and Schemas Base (`backend/main.py`, `backend/api/v1/router.py`, `backend/api/schemas/common.py`). Context: [context-packet-6.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-6.1.md)
   - **Task 6.2 (M6.2)**: One-Time Pad REST Router (`/api/v1/otp/*`) with typed Pydantic models (`backend/api/v1/otp.py`, `backend/api/schemas/otp.py`). Context: [context-packet-6.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-6.2.md)

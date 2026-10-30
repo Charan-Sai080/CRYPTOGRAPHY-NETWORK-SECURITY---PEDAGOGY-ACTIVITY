@@ -55,12 +55,44 @@
 - [x] Automated pytest suite covering API routes with 100% endpoint pass rate (37/37 passing, 282/282 overall).
 
 ## Milestone 7: Frontend Web Application
-- [ ] Set up modern React + TypeScript + Tailwind CSS project.
-- [ ] Build global layout, navigation, and cryptographic pedagogy documentation syllabus.
-- [ ] Build Lab 1: One-Time Pad Interactive Lab & Two-Time Pad Cracker.
-- [ ] Build Lab 2: LCG Parameter Explorer, Cycle Visualizer, & 2D/3D Lattice Plot.
-- [ ] Build Lab 3: ElGamal Key Exchange, Step-by-Step Math, & Homomorphic Playground.
-- [ ] Build Lab 4: DSA Document Signer, Live Tamper Tester, & PS3 Nonce Exploit.
+- [ ] **M7.1: Frontend Scaffolding, Tailwind Setup, Theme System, Header/Nav/Layout, API Base**
+  - [ ] Initialize Vite + React + TypeScript + Tailwind CSS in `frontend/`.
+  - [ ] Implement `ThemeContext` (Dark/Light mode with `localStorage` persistence).
+  - [ ] Build responsive `AppLayout`, `Navbar` with API health polling, and `Footer`.
+  - [ ] Configure typed Axios API base client (`baseURL: http://localhost:8000/api/v1`) with error interceptors.
+  - [ ] Build reusable UI component library (`Card`, `Badge`, `Button`, `MathFormula` with KaTeX, `AlertBanner`, `SkeletonLoader`).
+  - [ ] Implement `DashboardPage` highlighting the 4 pedagogical pillars and syllabus.
+- [ ] **M7.2: One-Time Pad Lab UI**
+  - [ ] Implement CSPRNG key generator with encoding formats (hex, base64, ascii).
+  - [ ] Implement Shannon entropy radial gauge ($0.0 - 8.0$ bits/byte) with mathematical interpretation.
+  - [ ] Implement traced encryption/decryption sandbox with live bit-by-bit truth table and byte visualizer.
+  - [ ] Implement Two-Time Pad vulnerability sandbox showing key cancellation ($C_1 \oplus C_2 = P_1 \oplus P_2$).
+  - [ ] Implement interactive crib-dragging slider and automated dictionary-based plaintext recovery.
+- [ ] **M7.3: Linear Congruential Generator (LCG) Lab UI**
+  - [ ] Implement parameter form ($m, a, c, X_0$) with historical presets dropdown.
+  - [ ] Implement step-by-step arithmetic trace inspector table ($X_{n+1} = (a X_n + c) \pmod m$).
+  - [ ] Implement Hull-Dobell theorem validator with condition-by-condition cards and prime factors visualizer.
+  - [ ] Implement Floyd's cycle-finding (tortoise-and-hare) empirical period and cycle start visualizer.
+  - [ ] Implement Chi-Square uniformity goodness-of-fit bar chart with observed vs expected bins and p-value.
+  - [ ] Implement Marsaglia 2D and 3D hyperplane lattice scatter plots (Canvas/SVG) with theoretical bounds.
+  - [ ] Implement algebraic LCG state cracker playground.
+- [ ] **M7.4: ElGamal Cryptosystem Lab UI**
+  - [ ] Implement domain presets dropdown (RFC 2409 1024-bit group, educational primes) and safe prime generator.
+  - [ ] Implement Alice & Bob interactive key exchange architectural diagram.
+  - [ ] Implement traced single-integer and multi-block UTF-8 text encryption/decryption with KaTeX formulas.
+  - [ ] Implement multiplicative homomorphism multiplier playground ($E(m_1) \cdot E(m_2) = E(m_1 \cdot m_2 \pmod p)$).
+  - [ ] Implement ephemeral nonce reuse cryptanalysis exploit sandbox ($c_{1,a} = c_{1,b}$).
+- [ ] **M7.5: Digital Signature Algorithm (DSA) Lab UI**
+  - [ ] Implement FIPS 186-4 standard and educational domain parameter selector & key pair generator.
+  - [ ] Implement document signing interface with SHA-256 hash truncation and FIPS 186-4 resampling trace.
+  - [ ] Implement step-by-step signature verification with complete LaTeX proof.
+  - [ ] Implement real-time single-bit document and signature tampering simulator with divergence detector.
+  - [ ] Implement Sony PS3 Nonce-Reuse Private Key Extraction playground ($k = (z_1 - z_2)(s_1 - s_2)^{-1} \pmod q$).
+- [ ] **M7.6: Frontend Production Build, Type-check, and Integration Verification**
+  - [ ] Configure Vite production build and asset bundling.
+  - [ ] Validate strict TypeScript compilation (`tsc --noEmit`) with 0 errors.
+  - [ ] Verify Tailwind CSS purging and responsive layouts across mobile, tablet, and desktop viewports.
+  - [ ] Perform end-to-end integration smoke testing against FastAPI backend endpoints.
 
 ## Milestone 8: Deployment & Packaging
 - [ ] Create multi-stage Dockerfile bundling FastAPI backend and built frontend assets.
