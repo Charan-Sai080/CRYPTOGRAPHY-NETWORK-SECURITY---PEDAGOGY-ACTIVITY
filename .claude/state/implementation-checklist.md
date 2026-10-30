@@ -37,13 +37,13 @@
 - [x] Unit tests for ElGamal cryptosystem and edge cases (61/61 passing, 204/204 total).
 
 ## Milestone 5: Digital Signature Algorithm (DSA)
-- [ ] Implement FIPS 186-4 parameter generator ($(p, q, g)$).
-- [ ] Implement key pair generation (`generate_dsa_keys(p, q, g) -> (priv, pub)`).
-- [ ] Implement signing with SHA-256 and $k$-resampling (`sign_dsa(message, priv, p, q, g, k)`).
-- [ ] Implement verification with calculation trace (`verify_dsa(message, r, s, pub, p, q, g)`).
-- [ ] Implement real-time document tampering detector.
-- [ ] Implement Sony PS3 style nonce-reuse private key recovery exploit.
-- [ ] Unit tests for DSA signing, verification, and tamper detection.
+- [x] Implement FIPS 186-4 parameter generator ($(p, q, g)$).
+- [x] Implement key pair generation (`generate_dsa_keys(p, q, g) -> (priv, pub)`).
+- [x] Implement signing with SHA-256 and $k$-resampling (`sign_dsa(message, priv, p, q, g, k)`).
+- [x] Implement verification with calculation trace (`verify_dsa(message, r, s, pub, p, q, g)`).
+- [x] Implement real-time document tampering detector.
+- [x] Implement Sony PS3 style nonce-reuse private key recovery exploit.
+- [x] Unit tests for DSA signing, verification, and tamper detection (41/41 passing, 245/245 total).
 
 ## Milestone 6: Backend API Layer (FastAPI)
 - [ ] Set up FastAPI project structure with CORS and error handlers.
