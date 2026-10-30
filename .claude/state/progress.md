@@ -1,6 +1,6 @@
 # Progress: Cryptography Pedagogy Platform
 
-## Status: Milestone 8 (Packaging, Containerization & Deployment) In Progress
+## Status: Milestone 8 (Packaging, Containerization & Deployment) Completed
 
 ### Milestone Progress
 * [x] **Planning**: Requirements analyzed, risk matrix established, architecture defined, state files initialized.
@@ -16,6 +16,11 @@
   - [x] M7.3: Linear Congruential Generator (LCG) Lab UI
   - [x] M7.4: ElGamal Cryptosystem Lab UI
   - [x] M7.5: Digital Signature Algorithm (DSA) Lab UI
-  - [x] M7.6: Frontend Production Build, Type-check, and Integration Verification
-* [ ] **M8: Packaging & Deployment**: In Progress (Production Static Mounting, Dockerfile, docker-compose, run.sh, README.md).
+  - [x] M7.6: Frontend Production Build & Integration Verification
+* [x] **M8: Packaging & Deployment**: Completed
+  - [x] M8.1: Unified Frontend Production Static File Serving via FastAPI (`backend/main.py` mounting `frontend/dist`)
+  - [x] M8.2: Multi-Stage Production Dockerfile and docker-compose.yml (`Dockerfile`, `docker-compose.yml`, `.dockerignore`, `requirements.txt`)
+  - [x] M8.3: Universal Orchestration Startup Script (`run.sh` with dev, prod, test, docker modes)
+  - [x] M8.4: Comprehensive Project Documentation & Hosting Guide (`README.md` with complete mathematical formulations, exploits, and API reference)
+
 

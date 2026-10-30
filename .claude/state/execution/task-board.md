@@ -1,13 +1,15 @@
 # Task Board: Cryptography Pedagogy Platform
 
 ## In Progress
-- **Task 8: Milestone 8 - Packaging, Containerization (Docker), Production Serving & Deployment Guide**
-  - **Task 8.1 (M8.1)**: Unified Frontend Production Static File Serving via FastAPI (`backend/main.py` mounting `frontend/dist`).
-  - **Task 8.2 (M8.2)**: Multi-Stage Production `Dockerfile` and `docker-compose.yml` for unified single-container deployment.
-  - **Task 8.3 (M8.3)**: Startup orchestration script `run.sh` supporting both local development and production modes.
-  - **Task 8.4 (M8.4)**: Comprehensive Project Documentation and Hosting Guide in `README.md`.
+*None* (All milestones 1 through 8 completed)
 
 ## Completed
+- **Task 8: Milestone 8 - Packaging, Containerization (Docker), Production Serving & Deployment Guide**
+  - Overall Milestone Context: [context-packet-8.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-8.md)
+  - **Task 8.1 (M8.1)**: Unified Frontend Production Static File Serving via FastAPI (`backend/main.py` mounting `frontend/dist` with browser content-negotiation HTML serving on `/` and `/assets` static mount, while preserving JSON `RootResponse` for API clients, ensuring all backend tests pass). Context: [context-packet-8.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-8.1.md)
+  - **Task 8.2 (M8.2)**: Multi-Stage Production `Dockerfile` and `docker-compose.yml` for unified single-container deployment (Node 22 Alpine builder -> Python 3.12 slim runner, non-root user `appuser`, single port 8000, pinned `requirements.txt`, container healthcheck). Context: [context-packet-8.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-8.2.md)
+  - **Task 8.3 (M8.3)**: Universal Orchestration Startup Script (`run.sh`) supporting `./run.sh dev` (concurrent FastAPI + Vite with signal trap cleanup), `./run.sh prod` (frontend build + unified FastAPI on 8000), `./run.sh test` (backend pytest suite + frontend typecheck & build), and `./run.sh docker` (`docker compose up --build`). Context: [context-packet-8.3.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-8.3.md)
+  - **Task 8.4 (M8.4)**: Comprehensive Project Documentation & Hosting Guide (`README.md`) featuring full mathematical formulations (LaTeX/KaTeX) across all 4 pillars, documented exploit mechanics (Two-Time Pad crib-dragging, Marsaglia hyperplanes, ElGamal nonce reuse, Sony PS3 fail0verflow private key recovery), architecture diagrams, API table, quickstart, and cloud deployment guides. Context: [context-packet-8.4.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-8.4.md)
 - **Task 7: Milestone 7 - Interactive Frontend Web Application & Educational Labs** (React 18 + TypeScript + Tailwind CSS with dark/light mode toggle and 4 labs). Clean production build (0 TS errors, 0 bundle warnings). Context: [context-packet-7.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.md)
   - **Task 7.1 (M7.1)**: Frontend Scaffolding, Tailwind Setup, Theme System, Header/Nav/Layout, API Client Base (`frontend/src/App.tsx`, `frontend/src/context/ThemeContext.tsx`, `frontend/src/api/client.ts`, `frontend/src/pages/DashboardPage.tsx`). Context: [context-packet-7.1.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.1.md)
   - **Task 7.2 (M7.2)**: One-Time Pad Lab UI (Key generator with Shannon entropy gauge, live bit-by-bit truth table & byte-level visualizer, Two-Time Pad vulnerability sandbox with interactive crib-dragging slider and automated dictionary attack). Context: [context-packet-7.2.md](file:///Users/charancherry/dev/ccWorkSpace/CNS/.claude/state/execution/context-packet-7.2.md)

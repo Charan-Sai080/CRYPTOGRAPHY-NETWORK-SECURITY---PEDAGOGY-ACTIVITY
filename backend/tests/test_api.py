@@ -60,6 +60,42 @@ class TestAppArchitectureAndHealth:
         assert "access-control-allow-origin" in response.headers
         assert response.headers["access-control-allow-origin"] == "http://localhost:5173"
 
+    def test_root_html_content_negotiation(self):
+        """Web browsers sending Accept: text/html receive index.html or fallback."""
+        response = client.get("/", headers={"Accept": "text/html,application/xhtml+xml"})
+        assert response.status_code == 200
+        from backend.main import FRONTEND_DIST_DIR
+        if (FRONTEND_DIST_DIR / "index.html").is_file():
+            assert "text/html" in response.headers.get("content-type", "")
+        else:
+            data = response.json()
+            assert data["app"] == "CNS Cryptography Pedagogy API"
+
+    def test_spa_client_side_routing_fallback(self):
+        """Non-API routes like /otp or /lcg serve index.html when dist is present."""
+        from backend.main import FRONTEND_DIST_DIR
+        response = client.get("/otp", headers={"Accept": "text/html"})
+        if (FRONTEND_DIST_DIR / "index.html").is_file():
+            assert response.status_code == 200
+            assert "text/html" in response.headers.get("content-type", "")
+        else:
+            assert response.status_code == 404
+
+    def test_spa_api_routes_not_intercepted(self):
+        """Unmatched /api/* routes must return 404 error rather than index.html."""
+        response = client.get("/api/v1/nonexistent-endpoint")
+        assert response.status_code == 404
+        data = response.json()
+        assert data["error"] == "HTTPException"
+        assert data["detail"] == "Endpoint not found"
+
+    def test_static_asset_or_favicon_serving(self):
+        """Static files in frontend/dist are served directly."""
+        from backend.main import FRONTEND_DIST_DIR
+        if (FRONTEND_DIST_DIR / "favicon.svg").is_file():
+            response = client.get("/favicon.svg")
+            assert response.status_code == 200
+
     def test_validation_error_handler_422(self):
         # Negative length violates ge=1
         response = client.post("/api/v1/otp/generate-key", json={"length": -5})
